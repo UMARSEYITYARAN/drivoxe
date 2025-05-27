@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.page {
+    padding: 3.125rem;
+}
+
+.form {
+    max-width: 18.75rem;
+    
+    margin: 0 auto;
+    display: grid;
+    gap: 15px;
+    color: #0e5da7;
+}
+
+.form__input {
+    width: 100%;
+    padding: 10px;
+    height: 2.5rem;
+    outline: none;
+    border: 2px solid #0e5da7;
+}
+
+
+textarea.form__input {
+    height: 250px;
+
+}
+
+.form__button {
+    background-color: #0e5da7;
+    height: 40px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.alert-con {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+

@@ -1,0 +1,681 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Syne";
+}
+.uz{ 
+width: max-content ;
+ top: 20px;
+ right: 30px;
+ padding: 8px 16px;
+ background-color: #FD3B3B;
+ color: white;
+ border: none;
+ border-radius: 4px;
+ cursor: pointer;
+ z-index: 1000;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 210px;
+    margin-bottom: 72px;
+    padding-left: 50px;
+    padding-top: 40px;
+}
+
+.col {
+    width: 100%;
+    height: 100vh;
+    /* margin-bottom: 100px; */
+}
+
+.nav-text {
+    display: flex;
+    gap: 64px;
+}
+
+.signup {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.contact {
+    width: 65px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #FD3B3B;
+    border-right: 1px solid #222222;
+}
+
+.sign {
+    width: 216px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #FFFFFF;
+    border-radius: 32px;
+    border: 1px solid #FD3B3B;
+    background-color: #FD3B3B;
+}
+
+.sign:hover {
+    color: #FD3B3B;
+    transition: .3s ease;
+    border: 1px solid #FD3B3B;
+    background-color: #FFFFFF;
+}
+
+.orta-txt {
+    text-align: center;
+}
+
+.orta-txt p {
+    font-size: 20px;
+    font-size: 600;
+
+}
+.navbar p, a{ 
+    text-decoration: none;
+    color: #000000;
+}
+
+.orta-txt h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.ikki {
+    width: 320px;
+    height: 903px;
+    padding-top: 32px;
+}
+
+.tags {
+    width: 320px;
+}
+
+.hatch p {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.vid {
+    display: flex;
+    gap: 32px;
+}
+
+.pop {
+    font-size: 20px;
+    font-weight: 600;
+    color: #666666;
+    margin-bottom: 24px;
+}
+
+.aff {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.two-car {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.hamma {
+    display: flex;
+    gap: 90px;
+    padding-top: 32px;
+}
+
+.pilar p {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.photo {
+    width: 100%;
+}
+
+.big-con {
+    display: flex;
+    gap: 64px;
+    padding-top: 20px;
+    margin-bottom: 48px;
+}
+
+
+
+.one-car {
+    width: 280px;
+    height: 406px;
+    padding: 12px;
+    border-radius: 10px;
+    background-color: #22222208;
+}
+.one-car .css{ 
+    font-size: 20px;
+}
+
+
+.omer {
+    flex-direction: column;
+    gap: 0px;
+}
+
+.big-con {
+    display: flex;
+    gap: 64px;
+}
+
+.shart {
+    padding-left: 0;
+}
+
+.shartli {
+    padding-left: 0;
+}
+
+.big {
+    margin-bottom: 80px;
+}
+
+.one-car img {
+    margin-bottom: 32px;
+}
+
+.one-text h2 {
+    margin-bottom: 22px;
+}
+
+.one-texts h2 {
+    margin-bottom: 52px;
+}
+
+.rent {
+    display: flex;
+    gap: 65px;
+}
+
+.r-btn1 {
+    width: max-content;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFFFFF;
+    padding: 0px 20px;
+    border-radius: 32px;
+    margin-bottom: 10px;
+    border: 1px solid #FD3B3B;
+    background-color: #FD3B3B;
+}
+
+.r-btn1:hover {
+    color: #FD3B3B;
+    background-color: #FFFFFF;
+}
+
+.one-car:hover {
+    color: #FFFFFF;
+    transition: .3s ease;
+    background-color: #FD3B3B;
+}
+
+.one-car:hover .r-btn1 {
+    color: #FD3B3B;
+    background-color: #FFFFFF;
+    backdrop-filter: blur(10px);
+    box-shadow: 4px 4px 10px 0px #0000001A;
+
+}
+
+.orta-nav p {
+    color: #222222;
+}
+
+.orta-nav button {
+    width: 143px;
+    height: 37px;
+    color: #222222;
+    border: #F8F8F8;
+    background-color: #F8F8F8;
+
+}
+
+.defolt {
+    width: 320px;
+    height: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background-color: #F8F8F8;
+}
+
+.defolt input {
+    width: 260px;
+    height: 18px;
+    border: none;
+    outline: none;
+    background-color: #F8F8F8;
+}
+
+.plus {
+    display: flex;
+    gap: 84px;
+}
+
+.orta-nav {
+    display: flex;
+    gap: 585px;
+
+}
+
+.two-page {
+    padding-left: 50px;
+    margin-bottom: 100px;
+}
+
+.dream {
+    padding-left: 50px;
+}
+
+.reser {
+    width: 1340px;
+    height: 399px;
+    border-radius: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 38px;
+    padding-left: 399px;
+    background-image: url(./asserts/06996ea1329d00c460133e85de71d40b\ \(1\).jpg);
+}
+
+.reser p {
+    font-size: 20px;
+    font-weight: 600;
+    padding-left: 660px;
+    padding-top: 56px;
+    color: #FFFFFF;
+}
+
+.reser h1 {
+    color: #FFFFFF;
+    font-size: 42px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 46px;
+}
+
+.reser button {
+    width: 212px;
+    height: 40px;
+    border-radius: 32px;
+    color: #FFFFFF;
+    margin-left: 628px;
+    background-color: #FD3B3B;
+    border: 1px solid #FD3B3B;
+}
+
+.reser button:hover {
+    background-color: #FFFFFF;
+    color: #FD3B3B;
+    transition: .3s ease;
+}
+
+.enter input {
+    width: 290px;
+    outline: none;
+    border: 1px solid #FFFFFF;
+}
+
+.enter {
+    width: 547px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    gap: 181px;
+    padding-left: 32px;
+    border-radius: 50px;
+    border: 1px solid #222222;
+}
+
+.dn h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.dont {
+    display: flex;
+    align-items: center;
+    gap: 105px;
+    padding-top: 41px;
+    margin-bottom: 56px;
+    padding:0 50px;
+}
+
+#menu a {
+    text-decoration: none;
+    color: #000000;
+    opacity: 1;
+    font-family: 'work sans', sans serif;
+    font-size: 1.5em;
+    font-weight: 400;
+    transition: 200ms;
+}
+
+a:hover {
+    opacity: 0.5;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+nav {
+    display: none;
+    height: 65px;
+}
+
+
+#menuToggle {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#menuToggle input {
+    display: flex;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+}
+
+#menuToggle span {
+    display: flex;
+    width: 29px;
+    height: 2px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #000000;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 5px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
+
+}
+
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+    color: #000000;
+}
+
+#menuToggle input:checked~span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-3px, -1px);
+    /* background: #36383F; */
+    color: #000000;
+}
+
+#menuToggle input:checked~span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked~span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+    position: absolute;
+    width: 385px;
+    height: 750px;
+    text-align: center;
+    box-shadow: 0 0 10px #85888C;
+    margin: -50px 0 0 -330px;
+    padding-left: 0px;
+    padding-top: 175px;
+    background-color: #FFFFFF;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: translate(-110%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li {
+    padding: 10px 0;
+    transition-delay: 2s;
+}
+
+#menuToggle input:checked~ul {
+    transform: none;
+}
+.sign a{ 
+    text-decoration: none;
+   color: #FFFFFF;
+}
+.sign a:hover{ 
+    color: #FD3B3B;
+}
+.nav-text a{ 
+    text-decoration: none;
+    color: #000000;
+}
+
+.dn p {
+    font-size: 18px;
+    font-weight: 500;
+    color: #777575;
+    margin-bottom: 56px;
+}
+
+.ql p {
+    margin-bottom: 12px;
+}
+
+.ql h3 {
+    margin-bottom: 19px;
+}
+
+.quiks {
+    display: flex;
+    gap: 40px;
+}
+
+.cryp {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.long {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #FD3B3B;
+    color: #FFFFFF;
+    background-color: #FD3B3B;
+}
+
+.long:hover {
+    background-color: #FFFFFF;
+    color: #FD3B3B;
+    transition: .3s ease;
+}
+
+@media (max-width:1024px) {
+    .card {
+        width: 100%;
+
+    }
+
+    .navbar {
+        gap: 70px;
+        padding: 20px 20px;
+    }
+
+    .nav-text {
+        gap: 20px;
+    }
+
+    .col {
+        height: max-content;
+        margin-bottom: 20px;
+    }
+
+    .two-page {
+        padding: 0 20px;
+    }
+
+    .orta-nav {
+
+        gap: 10px;
+    }
+
+    .big-con {
+        flex-wrap: wrap;
+        padding-left: 50px;
+    }
+
+    .omer {
+        display: flex;
+        gap: 64px;
+    }
+
+    .hamma {
+        flex-direction: column;
+    }
+
+    .shart {
+        padding-left: 180px;
+    }
+
+    .shartli {
+        padding-left: 220px;
+    }
+
+    .dream {
+        padding: 0 20px;
+    }
+
+    .dont {
+        flex-direction: column;
+    }
+
+    .reser {
+        width: 725px;
+        padding: 20px 20px;
+    }
+
+    .reser h1 {
+        font-size: 40px;
+    }
+
+    .reser p {
+        font-size: 15px;
+        padding: 20px 280px;
+    }
+
+    .reser button {
+        margin: 0px 250px;
+    }
+
+
+}
+@media (max-width:667px) {
+    .card{ 
+        width: 100%;
+    }
+    .navbar{ 
+        gap: 150px;
+        padding-top: 20px;
+    }   
+    .nav-text{ 
+        display: none;
+    } 
+    .signup{ 
+        display: none;
+    }
+    .orta-nav{ 
+        flex-direction: column;
+        gap: 10px;
+    }
+    .two-page{ 
+        padding-left: 20px;
+    }
+    nav {
+        display: block;
+        padding-top: 20px;
+    }   #menu a {
+        font-family: "Syne";
+    }
+    .signups {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-left: 120px;
+    }
+    
+    .shart {
+        padding-left: 0px;
+    }
+
+    .shartli {
+        padding-left: 0px;
+    }
+    .cryp{ 
+        gap: 10px;
+    }
+    .dont{ 
+        padding-left: 20px;
+        gap: 10px;
+    }
+    .plus{ 
+        flex-direction: column;
+    }
+    .big-con{ 
+        padding: 0 20px;
+    }
+    .reser{ 
+        width: 340px;
+    }
+    .reser p{ 
+        padding: 10px 20px;
+    }
+    .reser h1{ 
+        padding: 0 20px;
+    }
+    .reser button{ 
+        margin-left: 20px;
+    }
+    .enter{ 
+        width: 300px;
+    }
+    .enter input{ 
+        width: 260px;
+    }
+    .enter i{ 
+        display: none;
+    }
+
+}
