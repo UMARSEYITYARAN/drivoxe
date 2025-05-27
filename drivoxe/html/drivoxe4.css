@@ -53,6 +53,13 @@ width: max-content ;
     display: flex;
     gap: 64px;
     color: #FFFFFF;
+    opacity: 2;
+}
+.nav-text p{ 
+    color: #FFFFFF;
+}
+.signup p{ 
+    color: #FFFFFF;
 }
 
 .signup {
@@ -506,8 +513,11 @@ nav {
 
 .nav-text a {
     text-decoration: none;
-    color: #000000;
+    color: #FFFF;
+
 }
+
+
 
 .right-arrow {
     width: 50px;
@@ -914,5 +924,4 @@ nav {
     .dont {
         gap: 10px;
     }
-
-}
+
