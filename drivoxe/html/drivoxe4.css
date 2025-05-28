@@ -11,24 +11,27 @@
     justify-content: space-between;
     padding: 42px 0px;
     margin-bottom: 56px;
-    
+
 
 }
-.navbar p, a{ 
+
+.navbar p,
+a {
     text-decoration: none;
     color: #000000;
 }
-.uz{ 
-width: max-content ;
- top: 20px;
- right: 30px;
- padding: 8px 16px;
- background-color: #FD3B3B;
- color: white;
- border: none;
- border-radius: 4px;
- cursor: pointer;
- z-index: 1000;
+
+.uz {
+    width: max-content;
+    top: 20px;
+    right: 30px;
+    padding: 8px 16px;
+    background-color: #FD3B3B;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 1000;
 }
 
 .navbar img {
@@ -55,10 +58,12 @@ width: max-content ;
     color: #FFFFFF;
     opacity: 2;
 }
-.nav-text p{ 
+
+.nav-text p {
     color: #FFFFFF;
 }
-.signup p{ 
+
+.signup p {
     color: #FFFFFF;
 }
 
@@ -180,6 +185,11 @@ width: max-content ;
     justify-content: space-between;
     margin-bottom: 48px;
 }
+.min-but a{ 
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
 
 .book {
     width: 143px;
@@ -188,7 +198,9 @@ width: max-content ;
     border: 1px solid #FD3B3B;
     border-radius: 32px;
     color: #FFFFFF;
+    cursor: pointer;
 }
+
 
 .special {
     margin-bottom: 48px;
@@ -574,7 +586,7 @@ nav {
     align-items: center;
     gap: 35px;
     margin-bottom: 100px;
-    
+
 }
 
 
@@ -662,7 +674,12 @@ nav {
     gap: 105px;
     padding-top: 41px;
     margin-bottom: 56px;
-    padding:0 50px;
+    padding: 0 50px;
+}
+.car{ 
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .dn p {
@@ -728,7 +745,7 @@ nav {
         gap: 30px;
     }
 
-    
+
 
     .navbar {
         align-items: center;
@@ -924,4 +941,4 @@ nav {
     .dont {
         gap: 10px;
     }
-
+}
