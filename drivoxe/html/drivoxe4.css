@@ -49,6 +49,11 @@ a {
     background-image: url(./asserts/a8ada61ecf308588b0e927a753936952.jpg);
     background-position: center;
     margin-bottom: 100px;
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
 }
 
 
@@ -119,6 +124,12 @@ a {
     height: max-content;
     padding: 0px 50px;
     margin-bottom: 100px;
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20000px;
+
 }
 
 .imgss {
@@ -134,7 +145,7 @@ a {
 .tp-li {
     width: 519px;
     height: 796px;
-
+    padding: 0 50px;
 }
 
 .tp-li h1 {
@@ -303,6 +314,11 @@ a {
     height: max-content;
     padding: 0 50px;
     margin-bottom: 100px;
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
 }
 
 .umumiy {
@@ -371,6 +387,10 @@ a {
     height: 393px;
     padding: 0 50px;
     margin-bottom: 100px;
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .likelar {
@@ -383,6 +403,12 @@ a {
     font-size: 48px;
     font-weight: 500;
 
+}
+.footer{ 
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .lik-btn {

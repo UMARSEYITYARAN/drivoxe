@@ -34,6 +34,10 @@ width: max-content ;
 
 .col {
     margin-bottom: 100px;
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .nav-text {
@@ -123,11 +127,19 @@ width: max-content ;
 .two-page {
     padding: 0px 50px;
     margin-bottom: 100px;
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .three-page {
     padding: 0px 50px;
     margin-bottom: 100px;
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .txt {
@@ -264,14 +276,26 @@ width: max-content ;
     padding: 0px 50px;
     background-size: cover;
     background-repeat: no-repeat;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
 
 }
-
+.footer{ 
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 .five-page {
     display: flex;
     margin-bottom: 100px;
+        display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
 }
 
 .fv-p {

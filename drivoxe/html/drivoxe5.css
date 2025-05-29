@@ -9,7 +9,7 @@
     display: flex;
     align-items: center;
     gap: 260px;
-    margin-bottom: 72px;
+    margin-bottom: 42px;
     padding: 40px 50px;
 }
 .uz{ 
@@ -40,6 +40,10 @@ width: max-content ;
     width: 100%;
     height: 100vh;
     /* margin-bottom: 100px; */
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .nav-text {
@@ -81,7 +85,7 @@ width: max-content ;
 .col{ 
     width: 100%;
     height: 664px;
-    margin-bottom: 100px;
+    margin-bottom: 0px;
 }
 .colop { 
     font-size: 20px;
@@ -108,7 +112,20 @@ width: max-content ;
     width: 100%;
     height: 477px;
     padding: 0 50px;
-    margin-bottom: 100px;
+    margin-top: 250px;
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.yes{ 
+    padding: 0 50px;
+}
+.footer{ 
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .bookmi{ 
     font-size: 20px;
@@ -242,7 +259,7 @@ width: max-content ;
     background-position: center;
     margin-bottom: 38px;
     padding-top: 56px;
-    margin-top: 450px;
+    margin-top: 60px;
     background-image: url(./asserts/bd05b294b7d8cea00e3236c54aa97111.png);
 }
 
@@ -289,6 +306,9 @@ width: max-content ;
     justify-content: center;
     align-items: center;
 
+}
+.imega{ 
+    margin-bottom: 0px;
 }
 
 .reser button:hover {

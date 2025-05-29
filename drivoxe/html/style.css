@@ -10,6 +10,7 @@
 .cardd {
     width: 100%;
     background-color: #FFFFFF;
+ 
 }
 .sign a{ 
     text-decoration: none;
@@ -27,6 +28,10 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url(./asserts/9193b79934cffaa4f75587b9e0d333cc.png);
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .navbar {
@@ -136,6 +141,7 @@
     }
 
 .card{ 
+  
     margin-bottom: 110px;
 }
 
@@ -430,6 +436,10 @@ width: max-content ;
     height: 50vh;
     padding-left: 50px;
     margin-bottom: 210px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .driv {
@@ -439,6 +449,7 @@ width: max-content ;
 }
 
 .driv-txt p {
+    width: 700px;
     font-size: 18px;
     font-weight: 500;
     color: #828080;
@@ -478,6 +489,10 @@ width: max-content ;
     padding-left: 50px;
     margin-bottom: 100px;
     background-size: cover;
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     backdrop-filter: blur(50px);
     background-repeat: no-repeat;
     background-image: url(./asserts/235eb3f22007e0bd9f1e844c9974168f.png);
@@ -619,6 +634,10 @@ button {
     background-size: cover;
     backdrop-filter: blur(50px);
     background-repeat: no-repeat;
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-image: url(./asserts/42219d79652f3f7c6a64a6a49acd3b00.png);
 }
 
@@ -627,6 +646,10 @@ button {
     height: 712px;
     padding: 0px 50px;
     margin-bottom: 56px;
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .bg {
