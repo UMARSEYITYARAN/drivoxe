@@ -688,6 +688,12 @@ nav {
     color: #777575;
     margin-bottom: 56px;
 }
+.imgss{ 
+    object-fit: cover;
+}
+.asset{ 
+    object-fit: cover;
+}
 
 .ql p {
     margin-bottom: 12px;

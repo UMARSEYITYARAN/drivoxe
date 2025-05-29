@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drivoxe web</title>
     <link rel="stylesheet" href="./drivoxe4.css">
-     <link rel="icon" href="./asserts/salom.png">
+    <link rel="icon" href="./asserts/salom.png">
     <link href="https://fonts.googleapis.com/css?family=Syne:regular,500,600,700,800" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
@@ -19,95 +19,121 @@
             <div class="navbar">
                 <img src="./asserts/Drivoxe. (1).svg" alt="">
                 <div class="nav-text">
-                    <a href="/index.html"><p data-en="Service" data-uz="Xizmat">Service</p></a>
-                    <a href="./drivoxe2.html"><p data-en="Cars" data-uz="Avtomobillar">Cars</p></a>
-                    <a href="./drivoxe3.html"><p data-en="Pricing" data-uz="Narxlar">Pricing</p></a>
-                    <a href="./drivoxe4.html"><p data-en="About" data-uz=" Haqida">About</p></a>
+                    <a href="/index.html">
+                        <p data-en="Service" data-uz="Xizmat">Service</p>
+                    </a>
+                    <a href="./drivoxe2.html">
+                        <p data-en="Cars" data-uz="Avtomobillar">Cars</p>
+                    </a>
+                    <a href="./drivoxe3.html">
+                        <p data-en="Pricing" data-uz="Narxlar">Pricing</p>
+                    </a>
+                    <a href="./drivoxe4.html">
+                        <p data-en="About" data-uz=" Haqida">About</p>
+                    </a>
                     <button class="uz" id="language-toggle">UZB</button>
 
                 </div>
                 <nav role="navigation">
                     <div id="menuToggle">
-                      <input type="checkbox" />
+                        <input type="checkbox" />
                         <span></span>
                         <span></span>
                         <span></span>
-                    <ul id="menu">
-                      <li><a href="./index.html"><p data-en="Service" data-uz="Xizmat">Service</p></a></li>
-                      <li><a href="./drivoxe2.html"><p data-en="Cars" data-uz="Avtomobillar">Cars</p></a></li>
-                      <li><a href="./drivoxe3.html"><p data-en="Pricing" data-uz="Narxlar">Pricing</p></a></li>
-                      <li><a href="./drivoxe4.html"><p data-en="About" data-uz=" Haqida">About</p></a></li>
-                      <button class="uz" id="language-toggle">UZB</button>
+                        <ul id="menu">
+                            <li><a href="./index.html">
+                                    <p data-en="Service" data-uz="Xizmat">Service</p>
+                                </a></li>
+                            <li><a href="./drivoxe2.html">
+                                    <p data-en="Cars" data-uz="Avtomobillar">Cars</p>
+                                </a></li>
+                            <li><a href="./drivoxe3.html">
+                                    <p data-en="Pricing" data-uz="Narxlar">Pricing</p>
+                                </a></li>
+                            <li><a href="./drivoxe4.html">
+                                    <p data-en="About" data-uz=" Haqida">About</p>
+                                </a></li>
+                            <button class="uz" id="language-toggle">UZB</button>
 
-                      <div class="signups">
-                        <div class="contact">
-                            <p data-en="Contact" data-uz="Aloqa">Contact</p>
-                         </div>
-                         <button class="sign"><a href="./signup.html">Sign up </a></button>
-                      </div>
-                      
-                    </ul>
-                   </div>
-                  </nav>
+                            <div class="signups">
+                                <div class="contact">
+                                    <p data-en="Contact" data-uz="Aloqa">Contact</p>
+                                </div>
+                                <button class="sign"><a href="./signup.html">Sign up </a></button>
+                            </div>
+
+                        </ul>
+                    </div>
+                </nav>
                 <div class="signup">
                     <div class="contact">
-                       <a href="./drivoxe5.html"><p>Contact</p></a>
+                        <a href="./drivoxe5.html">
+                            <p>Contact</p>
+                        </a>
                     </div>
                     <button class="sign"><a href="./signup.html">Sign up </a></button>
-                    
+
                 </div>
             </div>
             <div class="orta">
-                <p data-en="Home/Cars/Cars detail" data-uz="Bosh sahifa/Avtomobillar/Avtomobil tafsilotlari">Home/Cars/Cars detail</p>
+                <p data-en="Home/Cars/Cars detail" data-uz="Bosh sahifa/Avtomobillar/Avtomobil tafsilotlari">
+                    Home/Cars/Cars detail</p>
                 <h1 data-en="Car Details" data-uz="Avtomobil tafsilotlari">Car Details</h1>
             </div>
         </div>
         <div class="two-page">
             <div class="hammasi">
                 <div class="top-car">
-                    <img class="imgss" src="./asserts/Photo (18).svg" alt="">
+                    <img class="imgss" id="carImage" src="./asserts/Photo (18).svg" alt="">
                     <div class="tops">
-                        <img class="asset" src="./asserts/Photo 1.svg" alt="">
-                        <img class="asset" src="./asserts/Photo 2.svg" alt="">
-                        <img class="asset" src="./asserts/Photo 3.svg" alt="">
+                        <img class="asset" id="pho" src="./asserts/Photo 1.svg" alt="" alt="1"
+                            onclick="changeImage(this)">
+                        <img class="asset" id="shar" src="./asserts/Photo 2.svg" alt="" onclick="changeImage(this)">
+                        <img class="asset" id="opa" src="./asserts/Photo 3.svg" alt="" onclick="changeImage(this)">
                     </div>
                 </div>
                 <div class="tp-li">
                     <h1>Vanguard CX2 <br>
                         Convertible</h1>
                     <p class="s" data-en="Starting at" data-uz="Dan boshlab">Starting at</p>
-                    <h2>$59/day</h2>
-                    <span data-en="Elevate your journey with the Ford Mustang Convertible, the epitome of American muscle and open-air excitement. Feel the wind in your hair as you experience the power, style, and iconic allure of this classic masterpiece. Cruise with confidence, top down." data-uz=" Ford Mustang Convertible bilan sayohatingizni yuqoriga ko'taring, bu Amerika kuch-quvvati va ochiq havo zavqining timsolidir. Ushbu klassik durdonaning kuchini, uslubini va ramziy jozibasini his qilganingizda, sochingizda shamolni his eting. Ishonch bilan, tepasi ochiq holda sayr qiling.">Elevate your journey with the Ford Mustang Convertible, the <br> epitome of American muscle
+                    <h2 data-en="$59/day" data-uz="$59/kun" id="price">$59/day</h2>
+                    <span
+                        data-en="Elevate your journey with the Ford Mustang Convertible, the epitome of American muscle and open-air excitement. Feel the wind in your hair as you experience the power, style, and iconic allure of this classic masterpiece. Cruise with confidence, top down."
+                        data-uz=" Ford Mustang Convertible bilan sayohatingizni yuqoriga ko'taring, bu Amerika kuch-quvvati va ochiq havo zavqining timsolidir. Ushbu klassik durdonaning kuchini, uslubini va ramziy jozibasini his qilganingizda, sochingizda shamolni his eting. Ishonch bilan, tepasi ochiq holda sayr qiling.">Elevate
+                        your journey with the Ford Mustang Convertible, the <br> epitome of American muscle
                         and open-air excitement. Feel <br> the wind in your hair as you experience the power, style, and
                         <br> iconic allure of this classic masterpiece. Cruise with <br> confidence, top down.</span>
                     <div class="min-but">
-                          <div class="car">
-                             <button class="i" id="mi">-</button>
-                             <p class="mi" id="no">0</p>
-                             <button class="i" id="pl">+</button>
-                  </div>
-                        <a target="_blank" href="./telegram.html"><button class="book" data-en="Book Now" data-uz="Hozir bron qiling">Book Now</button></a>
+                        <div class="car">
+                            <button class="i" id="decrement">-</button>
+                            <p class="mi" id="no">1</p>
+                            <button class="i" id="increment">+</button>
+                        </div>
+                        <a target="_blank" href="./telegram.html"><button class="book" data-en="Book Now"
+                                data-uz="Hozir bron qiling">Book Now</button></a>
                     </div>
                     <div class="special">
                         <p class="specm" data-en="SPECIFICATIONS" data-uz="TEXNIK XUSUSIYATLARI">SPECIFICATIONS</p>
                         <div class="spec">
                             <div class="locman">
-                                <p><img src="./asserts/fi_2962303.svg" alt="">Convertible</p>
-                                <p><img src="./asserts/fi_2061866.svg" alt="">5.0-liter V8</p>
-                                <h5 class="nega"><img src="./asserts/Page-1.svg" alt="">450 HP</h5>
+                                <p data-en="Convertible" data-uz="Aylantiriladigan"><img src="./asserts/fi_2962303.svg" alt="" data-en="./asserts/fi_2962303.svg" data-uz="./asserts/fi_2962303.svg">Convertible</p>
+                                <p data-en="5.0-liter V8" data-uz="5.0-litr V8"><img src="./asserts/fi_2061866.svg" alt="" data-en="./asserts/fi_2061866.svg" data-uz="./asserts/fi_2061866.svg">5.0-liter V8</p>
+                                <h5 class="nega" data-en="450 HP" data-uz="450 Ot Kuchi"><img src="./asserts/Page-1.svg" alt="" data-en="./asserts/Page-1.svg" data-uz="./asserts/Page-1.svg">450 HP</h5>
                             </div>
                             <div class="conman">
-                                <p><img src="./asserts/fi_2053323.svg" alt="">Automatic</p>
-                                <h5><img src="./asserts/fi_5102957.svg" alt="">4 passengers</h5>
+                                <p data-en="Automatic" data-uz="Avtomatik"><img src="./asserts/fi_2053323.svg" alt="" data-en="./asserts/fi_2053323.svg" data-uz="./asserts/fi_2053323.svg">Automatic</p>
+                                <h5 data-en="4 passengers" data-uz="4 Yoʻlovchi"><img src="./asserts/fi_5102957.svg" alt="" data-en="./asserts/fi_5102957.svg" data-uz="./asserts/fi_5102957.svg">4 passengers</h5>
                             </div>
                         </div>
                     </div>
                     <div class="in">
-                        <p data-en="IN COLOR" data-uz="RANGDA">IN COLOR</p>
+                        <p data-en="IN COLOR" data-uz="RANGLAR">IN COLOR</p>
                         <div class="cl">
-                            <button class="cl1"></button>
-                            <button class="cl2"></button>
-                            <button class="cl3"></button>
+                            <div class="color-buttons">
+                                <button class="cl1" onclick="changeColor('red')"></button>
+                                <button class="cl2" onclick="changeColor('black')"></button>
+                                <button class="cl3" onclick="changeColor('white')"></button>
+                            </div>
                         </div>
                     </div>
 
@@ -123,30 +149,43 @@
                     <div class="bin">
                         <div class="trio">
                             <p data-en="Convertible Top" data-uz=" Kovertibel ustki qismi">Convertible Top</p>
-                            <span data-en="Enjoy the open-air experience with an easy power-operated convertible top." data-uz="Oson ishlaydigan kovertibel ustki qismi bilan ochiq havo tajribasidan bahramand bo'ling.">Enjoy the open-air experience with an easy power- <br>operated convertible top.</span>
+                            <span data-en="Enjoy the open-air experience with an easy power-operated convertible top."
+                                data-uz="Oson ishlaydigan kovertibel ustki qismi bilan ochiq havo tajribasidan bahramand bo'ling.">Enjoy
+                                the open-air experience with an easy power- <br>operated convertible top.</span>
                         </div>
                         <div class="trio">
                             <p data-en="Infotainment System" data-uz="Infotainment System">Infotainment System</p>
-                            <span data-en="Stay connected with a modern and flexible multimedia system." data-uz=" Zamonaviy va moslashuvchan multimedia tizimi bilan bog'laning.">Stay connected with a modern and flexible <br> multimedia system.</span>
+                            <span data-en="Stay connected with a modern and flexible multimedia system."
+                                data-uz=" Zamonaviy va moslashuvchan multimedia tizimi bilan bog'laning.">Stay connected
+                                with a modern and flexible <br> multimedia system.</span>
                         </div>
                         <div class="trios">
                             <p data-en="Leather Interior" data-uz=" Charm ichki makon">Leather Interior</p>
-                            <span data-en="Experience premium comfort with leather-trimmed seats and design." data-uz="Charm bilan qoplangan o'rindiqlar va dizayn bilan yuqori darajadagi qulaylikni his eting.">Experience premium comfort with leather-trimmed <br> seats and design.</span>
+                            <span data-en="Experience premium comfort with leather-trimmed seats and design."
+                                data-uz="Charm bilan qoplangan o'rindiqlar va dizayn bilan yuqori darajadagi qulaylikni his eting.">Experience
+                                premium comfort with leather-trimmed <br> seats and design.</span>
                         </div>
                     </div>
                     <div class="ikkin">
                         <div class="trio">
                             <p data-en="Sport Mode" data-uz=" Sport rejimi">Sport Mode</p>
-                            <span data-en="Unleash the full power of the V8 engine for an exhilarating ride." data-uz="Hayajonli sayohat uchun V8 dvigatelining to'liq quvvatini oching.">Unleash the full power of the V8 engine for an <br> exhilarating ride.</span>
+                            <span data-en="Unleash the full power of the V8 engine for an exhilarating ride."
+                                data-uz="Hayajonli sayohat uchun V8 dvigatelining to'liq quvvatini oching.">Unleash the
+                                full power of the V8 engine for an <br> exhilarating ride.</span>
                         </div>
                         <div class="trio">
                             <p data-en="Advanced Safety" data-uz="Kengaytirilgan xavfsizlik">Advanced Safety</p>
-                            <span data-en="Benefit from modern safety features, including airbags and stability control." data-uz="Xavfsizlik yostiqchalari va barqarorlik nazorati kabi zamonaviy xavfsizlik xususiyatlaridan foydalaning.">Benefit from modern safety features, including <br> airbags and stability
+                            <span
+                                data-en="Benefit from modern safety features, including airbags and stability control."
+                                data-uz="Xavfsizlik yostiqchalari va barqarorlik nazorati kabi zamonaviy xavfsizlik xususiyatlaridan foydalaning.">Benefit
+                                from modern safety features, including <br> airbags and stability
                                 control.</span>
                         </div>
                         <div class="trios">
                             <p data-en="Iconic Design" data-uz="Ramziy dizayn">Iconic Design</p>
-                            <span data-en="Turn heads with the timeless, bold styling of the Ford Mustang" data-uz="Ford Mustang'ning vaqt sinovidan o'tgan, jasur uslubi bilan e'tiborni torting.">Turn heads with the timeless, bold styling of the <br> Ford Mustang.</span>
+                            <span data-en="Turn heads with the timeless, bold styling of the Ford Mustang"
+                                data-uz="Ford Mustang'ning vaqt sinovidan o'tgan, jasur uslubi bilan e'tiborni torting.">Turn
+                                heads with the timeless, bold styling of the <br> Ford Mustang.</span>
                         </div>
                     </div>
                 </div>
@@ -161,39 +200,39 @@
                 </div>
             </div>
             <div class="one-back">
-                    <div class="one-tayor">
-                        <img src="./asserts/Rectangle 98.svg" alt="">
-                        <div class="tayor">
-                            <p>Horizon Mirage <br> Convertible</p>
-                            <h3 data-en="$59/day" data-uz="$59/kun">$59/day</h3>
-                        </div>
+                <div class="one-tayor">
+                    <img src="./asserts/Rectangle 98.svg" alt="">
+                    <div class="tayor">
+                        <p>Horizon Mirage <br> Convertible</p>
+                        <h3 data-en="$59/day" data-uz="$59/kun">$59/day</h3>
                     </div>
-                    <div class="one-tayor">
-                        <img src="./asserts/Rectangle 98 (1).svg" alt="">
-                        <div class="tayor">
-                            <p>Vanguard Phoenix <br>
-                                C-Class</p>
-                            <h3 data-en="$49/day" data-uz="$49/kun">$49/day</h3>
-                        </div>
+                </div>
+                <div class="one-tayor">
+                    <img src="./asserts/Rectangle 98 (1).svg" alt="">
+                    <div class="tayor">
+                        <p>Vanguard Phoenix <br>
+                            C-Class</p>
+                        <h3 data-en="$49/day" data-uz="$49/kun">$49/day</h3>
                     </div>
-                
-            
-                    <div class="one-tayor">
-                        <img src="./asserts/Rectangle 98 (2).svg" alt="">
-                        <div class="tayor">
-                            <p>Apex Autos Typhoon <br> Model 3</p>
-                            <h3 data-en="$59/day" data-uz="$59/kun">$59/day</h3>
-                        </div>
+                </div>
+
+
+                <div class="one-tayor">
+                    <img src="./asserts/Rectangle 98 (2).svg" alt="">
+                    <div class="tayor">
+                        <p>Apex Autos Typhoon <br> Model 3</p>
+                        <h3 data-en="$59/day" data-uz="$59/kun">$59/day</h3>
                     </div>
-                    <div class="one-tayor">
-                        <img src="./asserts/Rectangle 98 (3).svg" alt="">
-                        <div class="tayor">
-                            <p>Radiant Solstice <br> Convertible</p>
-                            <h3 data-en="$79/day" data-uz="$79/kun">$79/day</h3>
-                        </div>
+                </div>
+                <div class="one-tayor">
+                    <img src="./asserts/Rectangle 98 (3).svg" alt="">
+                    <div class="tayor">
+                        <p>Radiant Solstice <br> Convertible</p>
+                        <h3 data-en="$79/day" data-uz="$79/kun">$79/day</h3>
                     </div>
-                
-                
+                </div>
+
+
                 <div class="one-tayor">
                     <img src="./asserts/Rectangle 98 (4).svg" alt="">
                     <div class="tayor">
@@ -202,55 +241,62 @@
                         <h3 data-en="$59/day" data-uz="$59/kun">$59/day</h3>
                     </div>
                 </div>
-            
-            </div>
+
             </div>
         </div>
-        <div class="footer">
-            <div class="dream">
-                <div class="reser">
-                    <h1 data-en="Book Your Adventure Today and Feel the Power of the Open Road." data-uz="Sarguzashtingizni bugun bron qiling va ochiq yo'lning kuchini his eting.">Book Your Adventure <br> Today and Feel the Power <br> of the Open Road.</h1>
-                    <button data-en="Let’s Drive with Us" data-uz="Keling, biz bilan haydang">Let’s Drive with Us</button>
+    </div>
+    <div class="footer">
+        <div class="dream">
+            <div class="reser">
+                <h1 data-en="Book Your Adventure Today and Feel the Power of the Open Road."
+                    data-uz="Sarguzashtingizni bugun bron qiling va ochiq yo'lning kuchini his eting.">Book Your
+                    Adventure <br> Today and Feel the Power <br> of the Open Road.</h1>
+                <button data-en="Let’s Drive with Us" data-uz="Keling, biz bilan haydang">Let’s Drive with Us</button>
+            </div>
+        </div>
+        <div class="dont">
+            <div class="dn">
+                <h1 data-en="Don’t Miss a Thing" data-uz="Hech narsani o'tkazib yubormang">Don’t Miss a Thing</h1>
+                <p data-en="Subscribe to our newsletter for exclusive deals and updates."
+                    data-uz="Eksklyuziv takliflar va yangilanishlar uchun xabarnomamizga obuna bo'ling.">Subscribe to
+                    our newsletter for exclusive deals and updates.</p>
+                <div class="enter">
+                    <input type="text" placeholder="Enter email address for newsletter ...">
+                    <i class="fa-solid fa-arrow-right-long"></i>
                 </div>
             </div>
-            <div class="dont">
-                <div class="dn">
-                    <h1 data-en="Don’t Miss a Thing" data-uz="Hech narsani o'tkazib yubormang">Don’t Miss a Thing</h1>
-                    <p data-en="Subscribe to our newsletter for exclusive deals and updates." data-uz="Eksklyuziv takliflar va yangilanishlar uchun xabarnomamizga obuna bo'ling.">Subscribe to our newsletter for exclusive deals and updates.</p>
-                    <div class="enter">
-                        <input type="text" placeholder="Enter email address for newsletter ...">
-                        <i class="fa-solid fa-arrow-right-long"></i>
+            <div class="quick">
+                <div class="quiks">
+                    <div class="ql">
+                        <h3 data-en="Quick Link" data-uz="Tezkor havola">Quick Link</h3>
+                        <p data-en="About us" data-uz=" Biz haqimizda">About us</p>
+                        <p data-en="Who we are" data-uz="Biz kimmiz">Who we are</p>
+                        <p data-en="Contact Us" data-uz="Biz bilan bog'laning">Contact Us</p>
+                    </div>
+                    <div class="ql">
+                        <h3 data-en="The Cars" data-uz="Avtomobillar">The Cars</h3>
+                        <p data-en="How it works" data-uz="Qanday ishlaydi">How it works</p>
+                        <p data-en="Pick a car" data-uz="Mashina tanlash">Pick a car</p>
+                        <p data-en="FAQs" data-uz="Tez-tez so'raladigan savollar">FAQs</p><br>
+                    </div>
+                    <div class="ql">
+                        <h3 data-en="Social Media" data-uz="Ijtimoiy tarmoqlar">Social Media</h3>
+                        <p>Facebook</p>
+                        <p>Instagram</p>
+                        <p>Twitter</p>
                     </div>
                 </div>
-                <div class="quick">
-                    <div class="quiks">
-                        <div class="ql">
-                            <h3 data-en="Quick Link" data-uz="Tezkor havola">Quick Link</h3>
-                            <p data-en="About us" data-uz=" Biz haqimizda">About us</p>
-                            <p data-en="Who we are" data-uz="Biz kimmiz">Who we are</p>
-                            <p data-en="Contact Us" data-uz="Biz bilan bog'laning">Contact Us</p>
-                        </div>
-                        <div class="ql">
-                            <h3 data-en="The Cars" data-uz="Avtomobillar">The Cars</h3>
-                            <p data-en="How it works" data-uz="Qanday ishlaydi">How it works</p>
-                            <p data-en="Pick a car" data-uz="Mashina tanlash">Pick a car</p>
-                            <p data-en="FAQs" data-uz="Tez-tez so'raladigan savollar">FAQs</p><br>
-                        </div>
-                        <div class="ql">
-                            <h3 data-en="Social Media" data-uz="Ijtimoiy tarmoqlar">Social Media</h3>
-                            <p>Facebook</p>
-                            <p>Instagram</p>
-                            <p>Twitter</p>
-                        </div>
-                    </div>
-                    <div class="cryp">
-                        <p data-en="Copyright © 2023 GoCar. All rights reserved." data-uz="Mualliflik huquqi © 2023 GoCar. Barcha huquqlar himoyalangan.">Copyright © 2023 GoCar. All rights reserved.</p>
-                        <button class="long"><i class="fa-solid fa-arrow-up-long"></i></button>
-                    </div>
+                <div class="cryp">
+                    <p data-en="Copyright © 2023 GoCar. All rights reserved."
+                        data-uz="Mualliflik huquqi © 2023 GoCar. Barcha huquqlar himoyalangan.">Copyright © 2023 GoCar.
+                        All rights reserved.</p>
+                    <button class="long"><i class="fa-solid fa-arrow-up-long"></i></button>
                 </div>
             </div>
         </div>
     </div>
+    </div>
 </body>
 <script src="./js4.js"></script>
+
 </html>
