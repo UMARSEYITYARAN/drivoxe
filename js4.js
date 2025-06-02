@@ -180,3 +180,63 @@ document.addEventListener('DOMContentLoaded', function () {
 
   languageBtn.addEventListener('click', toggleLanguage);
 });
+
+ // Formani ochish
+    function openForm() {
+        document.getElementById("userModal").style.display = "block";
+    }
+
+    // Formani yopish
+    function closeForm() {
+        document.getElementById("userModal").style.display = "none";
+    }
+
+    // Preview oynasini yopish
+    function closePreview() {
+        document.getElementById("previewModal").style.display = "none";
+    }
+
+    // Forma yuborilganda
+    document.getElementById("userForm").addEventListener("submit", function (event) {
+        event.preventDefault(); // Formani reload qilinishining oldini oladi
+
+        // Ism va familiyani olish
+        const name = event.target[0].value;
+        const surname = event.target[1].value;
+        const fileInput = event.target[2];
+
+        // Foydalanuvchi rasm faylini o'qish
+        const file = fileInput.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                // Ma'lumotlarni preview oynasiga joylashtirish
+                document.getElementById("previewImage").src = e.target.result;
+                document.getElementById("previewName").textContent = name;
+                document.getElementById("previewSurname").textContent = surname;
+
+                // Modal oynalarni boshqarish
+                document.getElementById("userModal").style.display = "none";
+                document.getElementById("previewModal").style.display = "block";
+
+                // Profil rasmini yangilash
+                document.getElementById("profileImage").src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+
+    // Modal tashqarisiga bosilganda yopish (optional)
+    window.onclick = function (event) {
+        const userModal = document.getElementById("userModal");
+        const previewModal = document.getElementById("previewModal");
+
+        if (event.target === userModal) {
+            userModal.style.display = "none";
+        }
+
+        if (event.target === previewModal) {
+            previewModal.style.display = "none";
+        }
+    };
+    

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<style>
+    /* Modal asosiy fon (overlay) */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.5); /* fonni qoraytirish */
+    }
+
+    /* Modal ichidagi kontent */
+    .modal-content {
+        background-color: #fff;
+        margin: 10% auto;
+        padding: 20px;
+        border-radius: 10px;
+        width: 90%;
+        max-width: 400px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        position: relative;
+        text-align: center;
+    }
+
+    /* Yopish tugmasi (x) */
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        color: #aaa;
+        font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .close:hover {
+        color: #000;
+    }
+
+    /* Forma inputlari */
+    #userForm input[type="text"],
+    #userForm input[type="file"] {
+        width: 90%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    /* Submit tugmasi */
+    #userForm button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    #userForm button:hover {
+        background-color: #45a049;
+    }
+
+    /* Preview matn uchun */
+    #previewName {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 10px 0 0;
+    }
+
+    #previewSurname {
+        font-size: 18px;
+        margin: 5px 0 15px;
+        color: #555;
+    }
+
+    /* Preview rasmi styling (qo‘shilgan avval) */
+    #previewImage {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+</style>
+
+
+
+<body>
+
+    <img id="profileImage" src="./Frame 427320342.svg" alt="User" onclick="openForm()"
+                            style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;  cursor: pointer;" />
+
+
+
+    <div id="userModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeForm()">&times;</span>
+                    <h2>Foydalanuvchi Ma'lumotlari</h2>
+                    <form id="userForm">
+                        <input type="text" placeholder="Ismingiz" required>
+                        <input type="text" placeholder="Familiyangiz" required>
+                        <input type="file" accept="image/*" required>
+                        <button type="submit">Saqlash</button>
+                    </form>
+                </div>
+            </div>
+
+
+            <!-- Yangi div foydalanuvchi ma'lumotlarini ko'rsatish uchun -->
+            <div id="previewModal" class="" style="display: none;">
+                <div class="modal-content">
+                    <span class="close" onclick="closePreview()">&times;</span>
+                    <img id="previewImage" src="" alt="Profil rasmi"
+                        style="width: 150px; border-radius: 10px; border:none;">
+                    <h3 id="previewName"></h3>
+                    <p id="previewSurname"></p>
+                </div>
+            </div>
+    
+</body>
+
+
+<script>
+    // Formani ochish
+    function openForm() {
+        document.getElementById("userModal").style.display = "block";
+    }
+
+    // Formani yopish
+    function closeForm() {
+        document.getElementById("userModal").style.display = "none";
+    }
+
+    // Preview oynasini yopish
+    function closePreview() {
+        document.getElementById("previewModal").style.display = "none";
+    }
+
+    // Forma yuborilganda
+    document.getElementById("userForm").addEventListener("submit", function (event) {
+        event.preventDefault(); // Formani reload qilinishining oldini oladi
+
+        // Ism va familiyani olish
+        const name = event.target[0].value;
+        const surname = event.target[1].value;
+        const fileInput = event.target[2];
+
+        // Foydalanuvchi rasm faylini o'qish
+        const file = fileInput.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                // Ma'lumotlarni preview oynasiga joylashtirish
+                document.getElementById("previewImage").src = e.target.result;
+                document.getElementById("previewName").textContent = name;
+                document.getElementById("previewSurname").textContent = surname;
+
+                // Modal oynalarni boshqarish
+                document.getElementById("userModal").style.display = "none";
+                document.getElementById("previewModal").style.display = "block";
+
+                // Profil rasmini yangilash
+                document.getElementById("profileImage").src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+
+    // Modal tashqarisiga bosilganda yopish (optional)
+    window.onclick = function (event) {
+        const userModal = document.getElementById("userModal");
+        const previewModal = document.getElementById("previewModal");
+
+        if (event.target === userModal) {
+            userModal.style.display = "none";
+        }
+
+        if (event.target === previewModal) {
+            previewModal.style.display = "none";
+        }
+    };
+</script>
+
+
+</html>

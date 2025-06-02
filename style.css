@@ -27,7 +27,7 @@
     padding-left: 50px;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(./asserts/9193b79934cffaa4f75587b9e0d333cc.png);
+    background-image: url(./drivoxe/html/asserts/9193b79934cffaa4f75587b9e0d333cc.png);
         display: flex;
     flex-direction: column;
     align-items: center;
@@ -430,6 +430,101 @@ width: max-content ;
     box-shadow: 4px 4px 10px 0px #0000001A;
 
 }
+ /* Modal asosiy fon (overlay) */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.5); /* fonni qoraytirish */
+    }
+
+    /* Modal ichidagi kontent */
+    .modal-content {
+        background-color: #fff;
+        margin: 10% auto;
+        padding: 20px;
+        border-radius: 10px;
+        width: 90%;
+        max-width: 400px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        position: relative;
+        text-align: center;
+    }
+
+    /* Yopish tugmasi (x) */
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        color: #aaa;
+        font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .close:hover {
+        color: #000;
+    }
+
+    /* Forma inputlari */
+    #userForm input[type="text"],
+    #userForm input[type="file"] {
+        width: 90%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    /* Submit tugmasi */
+    #userForm button {
+        background-color: #FD3B3B;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    #userForm button:hover {
+        background-color: #FD3B3B;
+    }
+
+    /* Preview matn uchun */
+    #previewName {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 10px 0 0;
+    }
+
+    #previewSurname {
+        font-size: 18px;
+        margin: 5px 0 15px;
+        color: #555;
+    }
+
+    /* Preview rasmi styling (qo‘shilgan avval) */
+    #previewImage {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+    #previewModal{ 
+        width: 320px;
+       margin-top: 520px;
+       display: flex;
+       justify-content: center;
+       position: relative;
+       right: 8px;
+        }
 
 .three-page {
     width: 100%;
@@ -495,7 +590,7 @@ width: max-content ;
     justify-content: center;
     backdrop-filter: blur(50px);
     background-repeat: no-repeat;
-    background-image: url(./asserts/235eb3f22007e0bd9f1e844c9974168f.png);
+    background-image: url(./drivoxe/html/asserts/235eb3f22007e0bd9f1e844c9974168f.png);
 }
 
 button {
@@ -638,7 +733,7 @@ button {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url(./asserts/42219d79652f3f7c6a64a6a49acd3b00.png);
+    background-image: url(./drivoxe/html/asserts/42219d79652f3f7c6a64a6a49acd3b00.png);
 }
 
 .footer {
@@ -661,7 +756,7 @@ button {
     background-size: cover;
     backdrop-filter: blur(50px);
     background-repeat: no-repeat;
-    background-image: url(./asserts/d87ebbcb96259df702f3e0c9639ed2ce.png);
+    background-image: url(./drivoxe/html/asserts/d87ebbcb96259df702f3e0c9639ed2ce.png);
 }
 .contact a{
     text-decoration: none;

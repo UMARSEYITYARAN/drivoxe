@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drivoxe web</title>
+    <link rel="icon" href="./asserts/salom.png">
     <link rel="stylesheet" href="./signup.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
@@ -15,14 +16,17 @@
             <img src="./Sign up-rafiki 1.svg" alt="">
         </div>
         <div class="col">
-            
+            <form id="signupForm">
             <p class="sign">Sign up</p>
             <p class="yor">Your email</p>
-            <input class="email" type="email" placeholder="email@gmail.com" name="email">
+            <input class="email" id="email" type="email" placeholder="email@gmail.com" required>
             <p class="yor">Password</p>
-            <input class="email" type="password" placeholder="••••••••" name="password">
-            <button class="successBtn" id="successBtn">Enter</button>
+            <input class="password" id="password" type="password" placeholder="Password" required>
+            <div id="message" class="alert" style="display: none;"></div>
+
+            <button>Enter</button>
             <a href="/index.html"><button class="successBtn">back to</button></a>
+            </form>
             <div id="alertContainer">
         </div>
            

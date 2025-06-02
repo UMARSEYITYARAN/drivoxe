@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup</title>
+        <!-- <link rel="stylesheet" href="./drivoxe/html/style.css"> -->
+    <link rel="icon" href="./drivoxe/html/asserts/salom.png">
+    <link href="https://fonts.googleapis.com/css?family=Syne:regular,500,600,700,800" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: sans-serif;
+             background-color: #04364A;
+             padding: 110px 186px;
+             display: flex;
+             justify-content: center;
+        }
+
+        input {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            width: 250px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+        }
+        h2{ 
+    font-size: 38px;
+    font-weight: 700;
+    color: #CDCDCD;
+    display: flex;
+    justify-content: center;
+}
+
+        .alert {
+            padding: 12px 20px;
+            margin-top: 15px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            width: fit-content;
+            min-width: 250px;
+            max-width: 90%;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 0.4s ease-in-out;
+            display: none;
+        }
+
+        .alert-success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .alert-error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .email{ 
+    width: 561px;
+    height: 48px;
+    padding: 12px 16px;
+    outline: none;
+    color: #CDCDCD;
+    border:1px solid #CDCDCD;
+    margin-bottom: 25px;
+}
+.password{ 
+    width: 561px;
+    height: 48px;
+    padding: 12px 16px;
+    outline: none;
+    color: #CDCDCD;
+    border:1px solid #CDCDCD;
+    margin-bottom: 25px;
+}
+.yor{ 
+    font-size: 16px;
+    font-weight: 600;
+    color: #CDCDCD;
+}
+.h2 button{ 
+    width: 591px;
+    height: 56px;
+    background-color: #176B87;
+    border-radius: 50px;
+    color: #FFFFFF;
+    border: 1px solid #176B87;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.h2{ 
+    width: 631px;
+    height: 506px;
+    padding: 50px 35px;
+    border-radius: 24px;
+    background-color: #04364A;
+     display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+   
+    </style>
+</head>
+<body>
+    <div class="h2">
+    <h2>Sign up</h2>
+
+    <form id="signupForm">
+        <p class="yor">Your email</p>
+        <input class="email" type="email" id="email" placeholder="Email manzilingiz"  />
+        <p class="yor">Password</p>
+        <input class="password" type="password" id="password" placeholder="Parolingiz"  />
+          <a target="_blank" href="./index.html"><button>Back to</button></a>
+        <div id="message" class="alert"></div>
+    </form>
+    </div>
+
+    <script>
+        const form = document.getElementById("signupForm");
+        const emailInput = document.getElementById("email");
+        const passwordInput = document.getElementById("password");
+        const message = document.getElementById("message");
+
+        // LocalStorage'dan mavjud qiymatlarni tiklash
+        window.addEventListener("DOMContentLoaded", () => {
+            const savedEmail = localStorage.getItem("signup_email");
+            const savedPassword = localStorage.getItem("signup_password");
+
+            if (savedEmail) emailInput.value = savedEmail;
+            if (savedPassword) passwordInput.value = savedPassword;
+        });
+
+        // Enter bosilganda ishlash
+        form.addEventListener("keydown", function (event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+
+                const email = emailInput.value.trim();
+                const password = passwordInput.value.trim();
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                if (email && password && emailPattern.test(email)) {
+                    localStorage.setItem("signup_email", email);
+                    localStorage.setItem("signup_password", password);
+
+                    message.textContent = "✅ Muvaffaqiyatli ro'yxatdan o'tdingiz!";
+                    message.className = "alert alert-success";
+                    message.style.display = "block";
+                } else {
+                    message.textContent = "❌ Iltimos, to'g'ri email va parol kiriting!";
+                    message.className = "alert alert-error";
+                    message.style.display = "block";
+                }
+                setInterval( function refFunc() {
+                    message.remove()
+                },5000)
+            }
+        });
+    </script>
+
+</body>
+</html>

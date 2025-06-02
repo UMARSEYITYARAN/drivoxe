@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drivoxe web</title>
-    <link rel="stylesheet" href="./drivoxe/html/style.css">
+    <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./drivoxe/html/asserts/salom.png">
     <link href="https://fonts.googleapis.com/css?family=Syne:regular,500,600,700,800" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -30,16 +30,43 @@
                         <a href="./index.html">
                             <p data-en="Service" data-uz="Xizmat">Service</p>
                         </a>
-                        <a href="./drivoxe/html/drivoxe2.html">
+                        <a href="./drivoxe2.html">
                             <p data-en="Cars" data-uz="Avtomobillar">Cars</p>
                         </a>
-                        <a href="./drivoxe/html/drivoxe3.html">
+                        <a href="./drivoxe3.html">
                             <p data-en="Pricing" data-uz="Narxlar">Pricing</p>
                         </a>
-                        <a href="./drivoxe/html/drivoxe4.html">
+                        <a href="./drivoxe4.html">
                             <p data-en="About" data-uz="Haqida">About</p>
                         </a>
                       <button class="uz" id="language-toggle">UZB</button>
+                     <img id="profileImage" src="./Frame 427320342.svg" alt="User" onclick="openForm()"
+                            style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;  cursor: pointer;" />
+                               <div id="userModal" class="modal">
+                               
+                <div class="modal-content">
+                    <span class="close" onclick="closeForm()">&times;</span>
+                    <h2>Foydalanuvchi Ma'lumotlari</h2>
+                    <form id="userForm">
+                        <input type="text" placeholder="Ismingiz" required>
+                        <input type="text" placeholder="Familiyangiz" required>
+                        <input type="file" accept="image/*" required>
+                        <button type="submit">Saqlash</button>
+                    </form>
+                </div>
+            </div>
+
+
+            <!-- Yangi div foydalanuvchi ma'lumotlarini ko'rsatish uchun -->
+            <div id="previewModal" class="" style="display: none;">
+                <div class="modal-content">
+                    <span class="close" onclick="closePreview()">&times;</span>
+                    <img id="previewImage" src="" alt="Profil rasmi"
+                        style="width: 150px; border-radius: 10px; border:none;">
+                    <h3 id="previewName"></h3>
+                    <p id="previewSurname"></p>
+                </div>
+            </div>
                     </div>
                     <nav role="navigation">
                         <div id="menuToggle">
@@ -51,13 +78,13 @@
                                 <li><a href="./index.html">
                                         <p data-en="Service" data-uz="Xizmat">Service</p>
                                     </a></li>
-                                <li><a href="./drivoxe/html/drivoxe2.html">
+                                <li><a href="./drivoxe2.html">
                                         <p data-en="Cars" data-uz="Avtomobillar">Cars</p>
                                     </a></li>
-                                <li><a href="./drivoxe/html/drivoxe3.html">
+                                <li><a href="./drivoxe3.html">
                                         <p data-en="Pricing" data-uz="Narxlar">Pricing</p>
                                     </a></li>
-                                <li><a href="./drivoxe/html/drivoxe4.html">
+                                <li><a href="./drivoxe4.html">
                                         <p data-en="About" data-uz="Haqida">About</p>
                                     </a></li>
                                     <li> <button class="uz" id="language-toggle">UZB</button></li>
@@ -65,7 +92,7 @@
                                     <div class="contact">
                                         <p data-en="Contact" data-uz="Bog'lanish">Contact</p>
                                     </div>
-                                    <button class="sign"><a href="./signup.html">Sign up </a></button>
+                                    <button class="sign"><a href="./sl.html">Sign up </a></button>
         
                                 </div>
                             </ul>
@@ -73,12 +100,12 @@
                     </nav>
                     <div class="signup">
                         <div class="contact">
-                            <a target="_blank" href="./drivoxe/html/drivoxe5.html">
+                            <a target="_blank" href="./drivoxe5.html">
                                 <p data-en="Contact" data-uz="Bog'lanish">Contact</p>
                             </a>
                         </div>
                         <button >
-                            <a href="./drivoxe/html/signup.html">
+                            <a target="_blank" href="./sl.html">
                                 <span class="up">Sign up</span>
                                 <div class="container">
                                     <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
@@ -371,7 +398,7 @@
     </center>
     
 </body>
-<script src="./drivoxe/html/js.js">
+<script src="./js.js">
  
 </script>
 
