@@ -77,10 +77,10 @@ decrementBtn.addEventListener('click', () => {
 // 🎨 Mashina rasm rangini o‘zgartiruvchi funksiya
 function changeColor(color) {
   if (color === 'black') {
-    carImage.src = './asserts/8254226e663bc5c98c47743784070795.jpg';
-    pho.src = './asserts/images.jpg';
-    shar.src = './asserts/images (1).jpg';
-    opa.src = './asserts/images (2).jpg';
+    carImage.src = './drivoxe/html/asserts/8254226e663bc5c98c47743784070795.jpg';
+    pho.src = './drivoxe/html/asserts/images.jpg';
+    shar.src = './drivoxe/html/asserts/images (1).jpg';
+    opa.src = './drivoxe/html/asserts/images (2).jpg';
 
     // carImage uchun maxsus o'lcham
     carImage.style.width = '774px';
@@ -93,10 +93,10 @@ function changeColor(color) {
     });
 
   } else if (color === 'white') {
-    carImage.src = './asserts/f9a460d163d870baf7e01251bdc47646.jpg';
-      pho.src = './asserts/331160.avif.webp';
-    shar.src = './asserts/1970-Dodge-Challenger-RT-002.jpg';
-    opa.src = './asserts/HS970_013DG__mid.jpg';
+    carImage.src = './drivoxe/html/asserts/f9a460d163d870baf7e01251bdc47646.jpg';
+      pho.src = './drivoxe/html/asserts/331160.avif.webp';
+    shar.src = './drivoxe/html/asserts/1970-Dodge-Challenger-RT-002.jpg';
+    opa.src = './drivoxe/html/asserts/HS970_013DG__mid.jpg';
         // carImage uchun maxsus o'lcham
     carImage.style.width = '774px';
     carImage.style.height = '549px';
@@ -109,9 +109,9 @@ function changeColor(color) {
 
   } else if (color === 'red') {
     carImage.src = './asserts/Photo (18).svg';
-    pho.src = './asserts/Photo 1.svg';
-    shar.src = './asserts/Photo 2.svg';
-    opa.src = './asserts/Photo 3.svg';
+    pho.src = './drivoxe/html/asserts/Photo 1.svg';
+    shar.src = './drivoxe/html/asserts/Photo 2.svg';
+    opa.src = './drivoxe/html/asserts/Photo 3.svg';
 
     // Barcha rasmlarga bir xil o'lcham (ixtiyoriy, agar kerak bo‘lsa)
     [ pho, shar, opa].forEach(img => {

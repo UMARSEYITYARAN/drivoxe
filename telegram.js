@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const name = form.querySelector(".name").value.trim();
         const email = form.querySelector(".email").value.trim();
+        const raqam = form.querySelector(".raqam").value.trim();
         const message = form.querySelector(".textarea").value.trim();
 
         // Telegram API uchun kerakli ma’lumotlar
@@ -16,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const text = `
 📩 *Yangi ariza!*
 👤 Ismi: *${name}*
+📞 Telefon raqam: +*${raqam}*
 📞 Email: *${email}*
 💬 Izoh: ${message}
     `;
