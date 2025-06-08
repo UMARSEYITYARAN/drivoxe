@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+
+
+.imgss {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.5s ease;
+}
+
+.asset {
+    width: 80px;
+    height: auto;
+    cursor: pointer;
+    margin-right: 10px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.asset:hover {
+    border-color: #000;
+}
+
+.color-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.color-buttons button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #eee;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.color-buttons button.active {
+    transform: scale(1.1);
+    border-color: #000;
+}
+
+.cl1 { background-color: #ff0000; }
+.cl2 { background-color: #000000; }
+.cl3 { background-color: #ffffff; border: 2px solid #ddd; }
+
+    </style>
+
+<!-- Main Red Car -->
+<img id="carImage" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDAgMzAwIj48cmVjdCB3aWR0aD0iNTAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iI2ZmMDAwMCIvPjx0ZXh0IHg9IjI1MCIgeT0iMTUwIiBmb250LXNpemU9IjI0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSI+UkVEIENBUjwvdGV4dD48L3N2Zz4=" alt="Red car">
+
+<!-- Red Car Thumbnails -->
+<img class="asset" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2ZmMDAwMCIvPjx0ZXh0IHg9IjUwIiB5PSI1MCIgZm9udC1zaXplPSIxMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0id2hpdGUiPlJFRCAxPC90ZXh0Pjwvc3ZnPg==" alt="Red car thumbnail 1">
+<img class="asset" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2ZmMDAwMCIvPjx0ZXh0IHg9IjUwIiB5PSI1MCIgZm9udC1zaXplPSIxMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0id2hpdGUiPlJFRCAyPC90ZXh0Pjwvc3ZnPg==" alt="Red car thumbnail 2">
+<img class="asset" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2ZmMDAwMCIvPjx0ZXh0IHg9IjUwIiB5PSI1MCIgZm9udC1zaXplPSIxMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0id2hpdGUiPlJFRCAzPC90ZXh0Pjwvc3ZnPg==" alt="Red car thumbnail 3">
+<div class="top-car">
+    <img class="imgss" id="carImage" src="./drivoxe/html/asserts/red-car-main.jpg" alt="Red car">
+    <div class="tops">
+        <img class="asset" id="pho" src="./drivoxe/html/asserts/red-car-thumb1.jpg" alt="Red car thumbnail 1" onclick="changeImage(this)">
+        <img class="asset" id="shar" src="./drivoxe/html/asserts/red-car-thumb2.jpg" alt="Red car thumbnail 2" onclick="changeImage(this)">
+        <img class="asset" id="opa" src="./drivoxe/html/asserts/red-car-thumb3.jpg" alt="Red car thumbnail 3" onclick="changeImage(this)">
+    </div>
+</div>
+
+<div class="in">
+    <p>RANGLAR</p>
+    <div class="cl">
+        <div class="color-buttons">
+            <button class="cl1 active" onclick="changeColor('red')"></button>
+            <button class="cl2" onclick="changeColor('black')"></button>
+            <button class="cl3" onclick="changeColor('white')"></button>
+        </div>
+    </div>
+</div>
+
+</body>
+
+<script>
+
+    function changeColor(color) {
+    // Update active button
+    document.querySelectorAll('.color-buttons button').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    event.target.classList.add('active');
+    
+    // Get all image elements
+    const carImage = document.getElementById('carImage');
+    const thumb1 = document.getElementById('pho');
+    const thumb2 = document.getElementById('shar');
+    const thumb3 = document.getElementById('opa');
+    
+    // Fade out current image
+    carImage.style.opacity = 0;
+    
+    // After fade out completes, change images
+    setTimeout(() => {
+        const basePath = './drivoxe/html/asserts/';
+        
+        carImage.src = `${basePath}${color}-car-main.jpg`;
+        thumb1.src = `${basePath}${color}-car-thumb1.jpg`;
+        thumb2.src = `${basePath}${color}-car-thumb2.jpg`;
+        thumb3.src = `${basePath}${color}-car-thumb3.jpg`;
+        
+        // Update alt texts
+        carImage.alt = `${color} car`;
+        thumb1.alt = `${color} car thumbnail 1`;
+        thumb2.alt = `${color} car thumbnail 2`;
+        thumb3.alt = `${color} car thumbnail 3`;
+        
+        // Fade in new image
+        carImage.style.opacity = 1;
+    }, 300);
+}
+
+function changeImage(element) {
+    const mainImage = document.getElementById('carImage');
+    mainImage.src = element.src;
+    mainImage.alt = element.alt;
+}
+    const whiteCarImages = {
+  main: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDAgMzAwIj48cmVjdCB3aWR0aD0iNTAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSIyNTAiIHk9IjE1MCIgZm9udC1zaXplPSIyNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzAwMDAwMCI+V0hJVEUgQ0FSPC90ZXh0Pjwvc3ZnPg==",
+  thumb1: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSI1MCIgeT0iNTAiIGZvbnQtc2l6ZT0iMTIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMwMDAwMDAiPldISVRFIDE8L3RleHQ+PC9zdmc+",
+  thumb2: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSI1MCIgeT0iNTAiIGZvbnQtc2l6ZT0iMTIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMwMDAwMDAiPldISVRFIDI8L3RleHQ+PC9zdmc+",
+  thumb3: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSI1MCIgeT0iNTAiIGZvbnQtc2l6ZT0iMTIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMwMDAwMDAiPldISVRFIDM8L3RleHQ+PC9zdmc+"
+};
+// Color change function with embedded images
+function changeColor(color) {
+    // Remove active class from all buttons
+    document.querySelectorAll('.color-buttons button').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    
+    // Add active class to clicked button
+    event.target.classList.add('active');
+    
+    // Define all image sets
+    const imageSets = {
+        'red': {
+            main: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDAgMzAwIj48cmVjdCB3aWR0aD0iNTAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iI2ZmMDAwMCIvPjx0ZXh0IHg9IjI1MCIgeT0iMTUwIiBmb250LXNpemU9IjI0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSI+UkVEIENBUjwvdGV4dD48L3N2Zz4=",
+            thumb1: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2ZmMDAwMCIvPjx0ZXh0IHg9IjUwIiB5PSI1MCIgZm9udC1zaXplPSIxMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0id2hpdGUiPlJFRCAxPC90ZXh0Pjwvc3ZnPg==",
+            thumb2: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2ZmMDAwMCIvPjx0ZXh0IHg9IjUwIiB5PSI1MCIgZm9udC1zaXplPSIxMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0id2hpdGUiPlJFRCAyPC90ZXh0Pjwvc3ZnPg==",
+            thumb3: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2ZmMDAwMCIvPjx0ZXh0IHg9IjUwIiB5PSI1MCIgZm9udC1zaXplPSIxMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0id2hpdGUiPlJFRCAzPC90ZXh0Pjwvc3ZnPg=="
+        },
+        'black': {
+            main: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDAgMzAwIj48cmVjdCB3aWR0aD0iNTAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iIzAwMDAwMCIvPjx0ZXh0IHg9IjI1MCIgeT0iMTUwIiBmb250LXNpemU9IjI0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSI+QkxBQ0sgQ0FSPC90ZXh0Pjwvc3ZnPg==",
+            thumb1: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzAwMDAwMCIvPjx0ZXh0IHg9IjUwIiB5PSI1MCIgZm9udC1zaXplPSIxMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0id2hpdGUiPkJMQUNLIDE8L3RleHQ+PC9zdmc+",
+            thumb2: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzAwMDAwMCIvPjx0ZXh0IHg9IjUwIiB5PSI1MCIgZm9udC1zaXplPSIxMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0id2hpdGUiPkJMQUNLIDI8L3RleHQ+PC9zdmc+",
+            thumb3: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzAwMDAwMCIvPjx0ZXh0IHg9IjUwIiB5PSI1MCIgZm9udC1zaXplPSIxMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0id2hpdGUiPkJMQUNLIDM8L3RleHQ+PC9zdmc+"
+        },
+        'white': {
+            main: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDAgMzAwIj48cmVjdCB3aWR0aD0iNTAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSIyNTAiIHk9IjE1MCIgZm9udC1zaXplPSIyNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzAwMDAwMCI+V0hJVEUgQ0FSPC90ZXh0Pjwvc3ZnPg==",
+            thumb1: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSI1MCIgeT0iNTAiIGZvbnQtc2l6ZT0iMTIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMwMDAwMDAiPldISVRFIDE8L3RleHQ+PC9zdmc+",
+            thumb2: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSI1MCIgeT0iNTAiIGZvbnQtc2l6ZT0iMTIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMwMDAwMDAiPldISVRFIDI8L3RleHQ+PC9zdmc+",
+            thumb3: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSI1MCIgeT0iNTAiIGZvbnQtc2l6ZT0iMTIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMwMDAwMDAiPldISVRFIDM8L3RleHQ+PC9zdmc+"
+        }
+    };
+    
+    // Change images
+    document.getElementById('carImage').src = imageSets[color].main;
+    document.getElementById('pho').src = imageSets[color].thumb1;
+    document.getElementById('shar').src = imageSets[color].thumb2;
+    document.getElementById('opa').src = imageSets[color].thumb3;
+    
+    // Update alt texts
+    document.getElementById('carImage').alt = `${color} car`;
+    document.getElementById('pho').alt = `${color} car thumbnail 1`;
+    document.getElementById('shar').alt = `${color} car thumbnail 2`;
+    document.getElementById('opa').alt = `${color} car thumbnail 3`;
+}
+
+// Thumbnail click function
+function changeImage(element) {
+    const mainImage = document.getElementById('carImage');
+    mainImage.src = element.src;
+    mainImage.alt = element.alt;
+}
+</script>
+
+</html>

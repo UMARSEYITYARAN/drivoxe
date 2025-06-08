@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
     form.addEventListener("submit", function (e) {
         e.preventDefault();
 
+        const miqdor = form.querySelector(".miqdor").value.trim();
+        const narx = form.querySelector(".narx").value.trim();
         const name = form.querySelector(".name").value.trim();
         const email = form.querySelector(".email").value.trim();
         const raqam = form.querySelector(".raqam").value.trim();
@@ -16,8 +18,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const text = `
 📩 *Yangi ariza!*
+📩 *Mashina miqdori:*${miqdor}
+📩 *Mashina narxi:*${narx}
 👤 Ismi: *${name}*
-📞 Telefon raqam: +*${raqam}*
+📞 Telefon raqam:*${raqam}*
 📞 Email: *${email}*
 💬 Izoh: ${message}
     `;

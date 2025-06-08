@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Syne";
+    scroll-behavior: smooth;
 }
 .uz{ 
 width: max-content ;
@@ -27,7 +28,7 @@ width: max-content ;
 
 .col {
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
         display: flex;
     flex-direction: column;
     align-items: center;
