@@ -88,12 +88,40 @@
                                         <p data-en="About" data-uz="Haqida">About</p>
                                     </a></li>
                                     <li> <button class="uz" id="language-toggle">UZB</button></li>
+                                    <li><img id="profileImage" src="./Frame 427320342.svg" alt="User" onclick="openForm()"
+                            style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;  cursor: pointer;" />
+                               <div id="userModal" class="modal">
+                               
+                <div class="modal-content">
+                    <span class="close" onclick="closeForm()">&times;</span>
+                    <h2>Foydalanuvchi Ma'lumotlari</h2>
+                    <form id="userForm">
+                        <input type="text" placeholder="Ismingiz" required>
+                        <input type="text" placeholder="Familiyangiz" required>
+                        <input type="file" accept="image/*" required>
+                        <button type="submit">Saqlash</button>
+                    </form>
+                </div>
+            </div>
+
+
+            <!-- Yangi div foydalanuvchi ma'lumotlarini ko'rsatish uchun -->
+            <div id="previewModal" style="display: none;">
+                <div class="modal-content">
+                    <span class="close" onclick="closePreview()">&times;</span>
+                    <img id="previewImage" src="" alt="Profil rasmi"
+                        style="width: 150px; border-radius: 10px; border:none;">
+                    <h3 id="previewName"></h3>
+                    <p id="previewSurname"></p>
+                </div>
+            </div>
+                </li>
                                 <div class="signups">
                                     <div class="contact">
                                         <p data-en="Contact" data-uz="Bog'lanish">Contact</p>
                                     </div>
                                     <button class="sign"><a href="./sl.html">Sign up </a></button>
-        
+                                    
                                 </div>
                             </ul>
                         </div>
