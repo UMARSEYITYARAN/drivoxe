@@ -9,7 +9,7 @@
 .navbar {
     display: flex;
     align-items: center;
-    gap: 260px;
+    gap: 210px;
     margin-bottom: 42px;
     padding: 40px 50px;
 }
@@ -59,7 +59,7 @@ width: max-content ;
 }
 
 .contact {
-    width: 65px;
+    width: 95px;
     font-size: 16px;
     font-weight: 400;
     color: #FD3B3B;
@@ -345,10 +345,10 @@ width: max-content ;
 .dont {
     display: flex;
     align-items: center;
-    gap: 255px;
+    gap: 30px;
     padding-top: 41px;
     margin-bottom: 56px;
-    padding-left: 50px;
+    padding:0 50px;
 }
 
 .dn p {
